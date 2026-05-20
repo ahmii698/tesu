@@ -37,6 +37,10 @@ export const Route = createFileRoute("/")({
 });
 
 const TELEGRAM_URL = "https://t.me/mranabolic";
+// CHANGE: Social links add kiye
+const ZANGI_URL = "https://services.zangi.com/dl/conversation/1018398057";
+const REDDIT_URL = "https://www.reddit.com/r/MRANABOLIC/s/Vk8oKJzhzf";
+const TIKTOK_URL = "https://www.tiktok.com/@mranabolicuk?_r=1&_t=ZN-96FKog9LNEk";
 
 function Nav() {
   const links = [
@@ -50,7 +54,6 @@ function Nav() {
   return (
     <nav className="absolute top-0 left-0 right-0 z-30 flex items-center justify-between px-6 md:px-12 py-5">
       <a href="#" className="flex items-center">
-        {/* CHANGE: Logo size double - h-10 se h-20 */}
         <img src={logoImg} alt="MR ANABOLIC" className="h-20 w-auto" />
       </a>
       <ul className="hidden md:flex items-center gap-8 text-sm text-white/90">
@@ -137,24 +140,35 @@ function Hero() {
           <div className="flex flex-wrap gap-4">
             <a
               href={TELEGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-bold text-white shadow-[0_0_30px_-5px] shadow-primary/60 hover:bg-primary/90 transition"
             >
               <Send className="h-4 w-4" /> JOIN TELEGRAM
             </a>
+            {/* CHANGE: Zangi link laga diya */}
             <a
-              href="#contact"
+              href={ZANGI_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-md border border-white/20 px-6 py-3 text-sm font-bold text-white hover:border-primary hover:text-primary transition"
             >
               <MessageCircle className="h-4 w-4" /> CONTACT ON ZANGI
             </a>
+            {/* CHANGE: Reddit link laga diya */}
             <a
-              href="#contact"
+              href={REDDIT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-md border border-white/20 px-6 py-3 text-sm font-bold text-white hover:border-primary hover:text-primary transition"
             >
               <Globe className="h-4 w-4" /> REDDIT COMMUNITY
             </a>
+            {/* CHANGE: TikTok link laga diya */}
             <a
-              href="#contact"
+              href={TIKTOK_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-md border border-white/20 px-6 py-3 text-sm font-bold text-white hover:border-primary hover:text-primary transition"
             >
               <Music2 className="h-4 w-4" /> FOLLOW ON TIKTOK
@@ -179,7 +193,6 @@ function About() {
     <section id="about" className="px-6 md:px-12 py-20 max-w-7xl mx-auto">
       <div className="grid md:grid-cols-2 gap-10 items-center">
         <div className="relative rounded-lg overflow-hidden border border-primary/20 bg-gradient-to-br from-primary/20 to-background aspect-square md:aspect-auto md:h-80 flex items-center justify-center">
-          {/* CHANGE: About section logo bhi bada - max-w-[80%] se max-w-full kiya */}
           <img src={logoImg} alt="MR ANABOLIC logo" className="max-w-full h-auto w-48" loading="lazy" />
         </div>
         <div>
@@ -383,6 +396,8 @@ function CTA() {
           </p>
           <a
             href={TELEGRAM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-8 inline-flex items-center gap-2 rounded-md bg-primary px-8 py-4 text-sm font-bold text-white shadow-[0_0_40px_-5px] shadow-primary/70 hover:bg-primary/90 transition"
           >
             <Send className="h-4 w-4" /> JOIN THE TELEGRAM COMMUNITY
@@ -402,7 +417,6 @@ function Footer() {
     <footer className="border-t border-white/10 mt-10">
       <div className="px-6 md:px-12 py-12 max-w-7xl mx-auto grid md:grid-cols-4 gap-10 text-sm">
         <div>
-          {/* CHANGE: Footer logo size double - h-12 se h-24 */}
           <img src={logoImg} alt="MR ANABOLIC" className="h-24 w-auto" loading="lazy" />
         </div>
         <div>
@@ -419,10 +433,11 @@ function Footer() {
         <div>
           <h4 className="font-bold text-white mb-4">COMMUNITY</h4>
           <ul className="space-y-2">
-            <li><a href={TELEGRAM_URL} className="inline-flex items-center gap-2 text-white/80 hover:text-primary"><Send className="h-4 w-4" /> JOIN TELEGRAM</a></li>
-            <li><a href="#" className="inline-flex items-center gap-2 text-white/80 hover:text-primary"><MessageCircle className="h-4 w-4" /> CONTACT ON ZANGI</a></li>
-            <li><a href="#" className="inline-flex items-center gap-2 text-white/80 hover:text-primary"><Globe className="h-4 w-4" /> REDDIT COMMUNITY</a></li>
-            <li><a href="#" className="inline-flex items-center gap-2 text-white/80 hover:text-primary"><Music2 className="h-4 w-4" /> FOLLOW ON TIKTOK</a></li>
+            {/* CHANGE: Footer mein bhi links laga diye */}
+            <li><a href={TELEGRAM_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-white/80 hover:text-primary"><Send className="h-4 w-4" /> JOIN TELEGRAM</a></li>
+            <li><a href={ZANGI_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-white/80 hover:text-primary"><MessageCircle className="h-4 w-4" /> CONTACT ON ZANGI</a></li>
+            <li><a href={REDDIT_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-white/80 hover:text-primary"><Globe className="h-4 w-4" /> REDDIT COMMUNITY</a></li>
+            <li><a href={TIKTOK_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-white/80 hover:text-primary"><Music2 className="h-4 w-4" /> FOLLOW ON TIKTOK</a></li>
           </ul>
         </div>
         <div>

@@ -403,7 +403,7 @@ function CTA() {
             <Send className="h-4 w-4" /> JOIN THE TELEGRAM COMMUNITY
           </a>
           <div className="mt-5 inline-flex items-center gap-2 text-xs text-white/70">
-            Telegram Link: <span className="font-mono text-white">t.me/mranabolic</span>
+         
             <Copy className="h-3.5 w-3.5 cursor-pointer hover:text-primary" />
           </div>
         </div>
